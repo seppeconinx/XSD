@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element type="xs:string" name="Sender"/>
+              <xs:element type="xs:int" name="Timestamp"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mapping">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="UUID"/>
+              <xs:element type="xs:int" name="ID"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
