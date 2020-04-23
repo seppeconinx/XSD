@@ -15,7 +15,7 @@
         <xs:element name="Mapping">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="xs:int" name="UUID"/>
+              <xs:element type="xs:string" name="UUID"/>
               <xs:element type="xs:int" name="ID"/>
             </xs:sequence>
           </xs:complexType>
