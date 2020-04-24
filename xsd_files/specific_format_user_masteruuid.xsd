@@ -33,7 +33,7 @@
                     <xs:element name="Zip" type="xs:unsignedShort" />
                   </xs:sequence>
                 </xs:complexType>
-              </xs:element>"
+              </xs:element>
               <xs:element name=\"Tags\">
                 <xs:complexType>
                   <xs:sequence>
