@@ -16,15 +16,14 @@ for(const schema in schemas) {
 function validate() {
 	const schemaName = inputSchema.options[inputSchema.selectedIndex].value
 	const schemaUrl = schemas[schemaName];
-	const schema = getSchema(schemaUrl);
+	const schema = await getSchema(schemaUrl);
 	console.log(`validating ${xmlString.value}`);
 	console.log(`schema: ${schema}`);
 }
 
 async function getSchema(url) {
 	const response = await fetch(url);
-	const rawXML = await response.text();
-	return rawXML;
+	return await response.text();
 }
 
 buttonValidate.addEventListener('click', validate);
