@@ -27,7 +27,7 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="Street" type="xs:string" />
-                    <xs:element name="Housenmuber" type="xs:unsignedShort" />
+                    <xs:element name="Housenumber" type="xs:unsignedShort" />
                     <xs:element name="City" type="xs:string" />
                     <xs:element name="Zip" type="xs:unsignedShort" />
                   </xs:sequence>
