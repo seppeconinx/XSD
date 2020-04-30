@@ -5,7 +5,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Header">
-          <xs:complexType>
+          <xs:complexType mixed="true">
             <xs:sequence>
               <xs:element name="Sender" type="xs:string" />
               <xs:element name="Timestamp" type="xs:unsignedShort" />
