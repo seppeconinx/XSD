@@ -16,8 +16,8 @@
         <xs:element name="EventRegistration">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="UserId" type="xs:unsignedInt" />
-              <xs:element name="EventId" type="xs:unsignedInt" />
+              <xs:element name="UserId" type="xs:string" />
+              <xs:element name="EventId" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
