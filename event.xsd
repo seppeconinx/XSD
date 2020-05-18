@@ -17,29 +17,29 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UUID" type="xs:string" />
-              <xs:element name="Name" type="xs:string" />
-			  <xs:element name="StartDateTime" type="xs:int" />
-			  <xs:element name="EndDateTime" type="xs:int" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1" />
+			  <xs:element name="StartDateTime" type="xs:int" minOccurs="0" maxOccurs="1" />
+			  <xs:element name="EndDateTime" type="xs:int" minOccurs="0" maxOccurs="1" />
 			  <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Street" type="xs:string" />
-                    <xs:element name="Housenumber" type="xs:unsignedShort" />
-                    <xs:element name="City" type="xs:string" />
-                    <xs:element name="Zip" type="xs:unsignedShort" />
+                    <xs:element name="Street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Housenumber" type="xs:unsignedShort" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="City" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Zip" type="xs:unsignedShort" minOccurs="0" maxOccurs="1"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-			  <xs:element name="Organiser">
+			  <xs:element name="Organiser" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Firstname" type="xs:string" />
-                    <xs:element name="Lastname" type="xs:string" />
-					<xs:element name="Email" type="xs:string" />
+                    <xs:element name="Firstname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Lastname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>              
-              <xs:element name="Tags">
+              <xs:element name="Tags" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element maxOccurs="unbounded" name="Tag" type="xs:string" />
