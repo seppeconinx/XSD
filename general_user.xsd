@@ -37,8 +37,8 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="MailSubscribe" type="xs:boolean" minOccurs="0" maxOccurs="1" />
 							<xs:element name="Birthday" type="xs:int" minOccurs="0" maxOccurs="1" />
+							<xs:element name="MailSubscribe" type="xs:boolean" minOccurs="0" maxOccurs="1" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
