@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Message">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element type="xs:string" name="Sender" minOccurs="0" maxOccurs="1"/>
+							<xs:element type="xs:int" name="Timestamp" minOccurs="0" maxOccurs="1"/>
+							<xs:element type="xs:string" name="To" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="Invoice">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Products" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Product" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:string" name="Name" />
+													<xs:element type="xs:float" name="UnitPrice" />
+													<xs:element type="xs:int" name="Amount" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Event">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="UserId" minOccurs="0" maxOccurs="1"/>
+										<xs:element type="xs:string" name="EventId" minOccurs="0" maxOccurs="1"/>
+										<xs:element type="xs:int" name="StartDate" minOccurs="0" maxOccurs="1"/>
+										<xs:element type="xs:int" name="EndDate" minOccurs="0" maxOccurs="1"/>
+										<xs:element type="xs:base64Binary" name="Pdf" minOccurs="0" maxOccurs="1"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
