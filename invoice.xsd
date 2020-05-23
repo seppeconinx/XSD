@@ -39,7 +39,7 @@
 										<xs:element type="xs:string" name="EventId" minOccurs="0" maxOccurs="1"/>
 										<xs:element type="xs:int" name="StartDate" minOccurs="0" maxOccurs="1"/>
 										<xs:element type="xs:int" name="EndDate" minOccurs="0" maxOccurs="1"/>
-										<xs:element type="xs:base64Binary" name="Pdf" minOccurs="0" maxOccurs="1"/>
+										<xs:element type="xs:string" name="Pdf" minOccurs="0" maxOccurs="1"/>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
